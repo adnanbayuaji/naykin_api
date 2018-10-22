@@ -1,5 +1,5 @@
 <?php
-class Transaction{
+class Bus{
 // Connection instance
 private $connection;
 // table name
