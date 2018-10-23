@@ -1,5 +1,5 @@
 <?php
-class Transaction{
+class UserRoles{
 // Connection instance
 private $connection;
 // table name

@@ -1,5 +1,5 @@
 <?php
-class Transaction{
+class PaymentMethod{
 // Connection instance
 private $connection;
 // table name

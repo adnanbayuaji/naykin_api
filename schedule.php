@@ -1,5 +1,5 @@
 <?php
-class Transaction{
+class Schedule{
 // Connection instance
 private $connection;
 // table name

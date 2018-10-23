@@ -1,5 +1,5 @@
 <?php
-class Transaction{
+class Promotion{
 // Connection instance
 private $connection;
 // table name
