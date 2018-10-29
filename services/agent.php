@@ -11,7 +11,7 @@ class Agent{
     public $phone;
     public $email;
     public $address;
-    public $longitude;
+    public $longtitude;
     public $latitude;
     public $totalVehicle;
     public $rowStatus;
@@ -19,15 +19,17 @@ class Agent{
     public $createdBy;
     public $modifiedDate;
     public $modifiedBy;
+	// public $now = new DateTime();
     public function __construct($connection){
     $this->connection = $connection;
     }
     //C
     public function create(){
-        $query = "INSERT INTO ". $this->table_name ." (IDManager, AgentName, Phone, Email, Address, Longitude, Latitude, TotalVehicle, RowStatus, CreatedDate, CreatedBy) VALUES (".$idManager.", ".$agentName.", ".$phone.", ".$email.", ".$address.", ".$longitude.", ".$latitude.", ".$totalVehicle.", 0, ".new Date().", ".$createdBy.")";
+	date_default_timezone_set('Asia/Kolkata'); 
+        $query = "INSERT INTO ". $this->table_name ." (IDManager, AgentName, Phone, Email, Address, Longtitude, Latitude, TotalVehicle, RowStatus, CreatedDate, CreatedBy) VALUES ('".$this->idManager."', '".$this->agentName."', '".$this->phone."', '".$this->email."', '".$this->address."', '".$this->longtitude."', '".$this->latitude."', ".$this->totalVehicle.", 0, '".date("Y-m-d")."', '".$this->createdBy."')";
 
         $stmt = $this->connection->prepare($query);
-
+		
         $stmt->execute();
 
         return $stmt;
