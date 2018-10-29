@@ -24,7 +24,7 @@ class Agent{
     }
     //C
     public function create(){
-        $query = "INSERT INTO ". $this->table_name ." (ID, IDManager, AgentName, Phone, Email, Address, Longitude, Latitude, TotalVehicle, RowStatus, CreatedDate, CreatedBy) VALUES (".$id.", ".$idManager.", ".$agentName.", ".$phone.", ".$email.", ".$address.", ".$longitude.", ".$latitude.", ".$totalVehicle.", 0, ".new Date().", ".$createdBy.")";
+        $query = "INSERT INTO ". $this->table_name ." (IDManager, AgentName, Phone, Email, Address, Longitude, Latitude, TotalVehicle, RowStatus, CreatedDate, CreatedBy) VALUES (".$idManager.", ".$agentName.", ".$phone.", ".$email.", ".$address.", ".$longitude.", ".$latitude.", ".$totalVehicle.", 0, ".new Date().", ".$createdBy.")";
 
         $stmt = $this->connection->prepare($query);
 

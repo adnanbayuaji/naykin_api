@@ -1,9 +1,9 @@
 <?php
 class DBClass {
-private $host = "localhost";
-private $username = "root";
-private $password = "<YOUR_DB_PASSWORD>";
-private $database = "<YOUR_DB_NAME>";
+private $host = "sql174.main-hosting.eu";
+private $username = "u859746278_naykn";
+private $password = "naykin";
+private $database = "u859746278_naykn";
 public $connection;
 // get the database connection
 public function getConnection(){
